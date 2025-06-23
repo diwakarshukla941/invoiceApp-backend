@@ -26,7 +26,7 @@ app.use('/api/invoice',invoiceRoutes )
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
     console.log(`db connected suceessfully`);
-     app.listen(process.env.BACKEND_URL, () => console.log("🚀 Server running on http://localhost:5000"));
+     app.listen(process.env.PORT, () => console.log(`🚀 Server running on http://localhost:${process.env.PORT}`));
 })
 .catch(()=>{
     console.log(`something went wrong`);
